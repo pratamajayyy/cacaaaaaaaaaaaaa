@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>buat cacaaaaaaa 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Gaegu:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#ffc7d9;
+font-family:'Gaegu',cursive;
+overflow-x:hidden;
+}
+
+/* CONTAINER */
+.container{
+width:100%;
+min-height:100vh;
+background:linear-gradient(to bottom,#ffbfd2,#ffd8e5);
+position:relative;
+overflow:hidden;
+}
+
+/* FLOAT HEART */
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:1;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+animation:floatUp 6s linear forwards;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.5) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* TOP SECTION */
+.top-section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+position:relative;
+}
+
+/* TITLE */
+.title{
+font-family:'Cherry Bomb One',cursive;
+font-size:72px;
+color:white;
+text-shadow:
+0 4px 0 #ff9aba,
+0 8px 20px rgba(0,0,0,.15);
+z-index:3;
+}
+
+.subtitle{
+font-size:28px;
+color:white;
+margin-top:10px;
+z-index:3;
+}
+
+/* KAWAII DOLL */
+.kawaii-doll{
+position:absolute;
+top:20px;
+left:20px;
+width:120px;
+animation:floatDoll 3s ease-in-out infinite;
+z-index:3;
+}
+
+@keyframes floatDoll{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+/* NOTES */
+.note{
+position:absolute;
+background:#ffdce8;
+padding:12px;
+border-radius:12px;
+font-size:18px;
+color:#b85f7c;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+font-weight:bold;
+z-index:3;
+}
+
+.note1{
+right:35px;
+top:70px;
+transform:rotate(5deg);
+}
+
+.note2{
+left:40px;
+top:240px;
+transform:rotate(-5deg);
+}
+
+/* ENVELOPE */
+.envelope{
+width:320px;
+height:220px;
+background:#fff6f8;
+margin-top:40px;
+border-radius:25px;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transition:.3s;
+z-index:5;
+}
+
+.envelope:hover{
+transform:scale(1.03);
+}
+
+.envelope:before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:#ffc2d5;
+clip-path:polygon(0 0,50% 60%,100% 0);
+top:0;
+left:0;
+border-radius:25px 25px 0 0;
+}
+
+.mail-heart{
+font-size:70px;
+z-index:2;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.1);
+}
+}
+
+/* BUTTON */
+.open-btn{
+margin-top:20px;
+background:#ff95b5;
+padding:14px 35px;
+border-radius:30px;
+color:white;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+z-index:10;
+}
+
+.open-btn:hover{
+transform:scale(1.05);
+}
+
+/* LETTER SECTION */
+.letter-section{
+display:none;
+min-height:100vh;
+background:#fff4f7;
+padding:40px 20px;
+justify-content:center;
+align-items:center;
+}
+
+.letter-section.show{
+display:flex;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(.95);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+/* PAPER */
+.paper{
+width:100%;
+max-width:900px;
+background:#fffaf7;
+border-radius:25px;
+padding:40px 25px;
+position:relative;
+border:3px solid #ffe2ea;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+/* PHOTO */
+.photo-row{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.photo{
+width:150px;
+height:180px;
+background:#ffcddd;
+border:8px solid white;
+border-radius:12px;
+overflow:hidden;
+position:relative;
+box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.photo:before{
+content:'';
+position:absolute;
+top:-10px;
+left:50%;
+transform:translateX(-50%);
+width:60px;
+height:15px;
+background:#ffadc6;
+border-radius:5px;
+}
+
+/* TITLE */
+.letter-title{
+text-align:center;
+font-family:'Cherry Bomb One',cursive;
+font-size:50px;
+color:#ff6f98;
+margin-bottom:20px;
+text-shadow:0 3px 0 #ffd5e2;
+}
+
+/* TEXT */
+.letter-text{
+font-family:'Patrick Hand',cursive;
+font-size:24px;
+line-height:1.8;
+color:#7d5a66;
+text-align:center;
+padding:0 10px;
+}
+
+/* FLOWER */
+.flower{
+position:absolute;
+left:20px;
+bottom:15px;
+font-size:65px;
+}
+
+/* NOTES BOTTOM */
+.bottom-note{
+position:absolute;
+background:#ffdce8;
+padding:12px;
+border-radius:12px;
+font-size:18px;
+color:#b85f7c;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.note-left{
+left:20px;
+bottom:25px;
+transform:rotate(-5deg);
+}
+
+.note-right{
+right:20px;
+bottom:30px;
+transform:rotate(5deg);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.title{
+font-size:48px;
+}
+
+.subtitle{
+font-size:22px;
+}
+
+.envelope{
+width:240px;
+height:170px;
+}
+
+.photo{
+width:110px;
+height:130px;
+}
+
+.letter-title{
+font-size:38px;
+}
+
+.letter-text{
+font-size:19px;
+}
+
+.note{
+font-size:14px;
+}
+
+.kawaii-doll{
+width:90px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hearts"></div>
+
+<!-- HALAMAN PERTAMA -->
+<div class="top-section" id="topSection">
+
+<img class="kawaii-doll" src="https://cdn-icons-png.flaticon.com/512/742/742751.png">
+
+<div class="note note1">
+you're special 💖
+</div>
+
+<div class="note note2">
+for you 💌
+</div>
+
+<div class="title">
+hey babe 💕
+</div>
+
+<div class="subtitle">
+you've got a love letter! 
+</div>
+
+<div class="envelope" onclick="openLetter()">
+<div class="mail-heart">💖</div>
+</div>
+
+<div class="open-btn" onclick="openLetter()">
+bukanya disini yaaaaaaaaaaaaaaaaaaaa 🎀
+</div>
+
+</div>
+
+<!-- HALAMAN KEDUA -->
+<div class="letter-section" id="letterSection">
+
+<div class="paper">
+
+<div class="photo-row">
+
+<div class="photo">
+<img src="foto1.jpeg">
+</div>
+
+<div class="photo">
+<img src="foto2.jpeg">
+</div>
+
+<div class="photo">
+<img src="foto3.jpeg">
+</div>
+
+<div class="photo">
+<img src="foto4.jpeg">
+</div>
+
+</div>
+
+<div class="letter-title">
+hiii salsa 💖
+</div>
+
+<div class="letter-text">
+
+ini agak alay tapi gapapa lah ya wwkwkwkwk, dan so sorry harus nya aku kirim kemarin ini :((( sayang bukan apa-apa ko ini cuma aku mau bilang km cantik banget dan aneh nya kenapa bisa cantik tiap hari ya? wkwk 💕 kemarin aku beliin km bunga sama perintilannya maaf bgt dadakan emg spontan ga da rencana wkwk 🌷 sama maaf bgt ga da yg gedeee aku udh carii ga nemu 😭💖 sama maaf aku sering bikin km worry sama aku atau selalu ngerasa salah gitu jangan keseringan gitu ya cantikkk 🥺 km semangat skripsnya dan bentar lg kamu haid ya aku gabisa nemenin deh pas kamu masuk periode itu karna kita ldr lg 😭 tapi kalo ada apa apa jgn sungkan kasi tau aku yaaaaaa :((((( 💌 udh ah kepenjangan cape ngetik nyaaa
+
+</div>
+<br><br>
+<div class="flower">
+🌷
+</div>
+
+<div class="bottom-note note-left">
+thank you 💖
+</div>
+
+<div class="bottom-note note-right">
+i love you 💌
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+    document.getElementById('topSection').style.display='none';
+document.getElementById('letterSection').classList.add('show');
+
+/* PLAY MUSIC */
+const bgm = document.getElementById('bgm');
+bgm.play().catch((e) => {
+  console.log("Autoplay diblokir browser:", e);
+});
+
+document.getElementById('topSection').style.display='none';
+
+document.getElementById('letterSection').classList.add('show');
+
+}
+
+/* HEART ANIMATION */
+
+const hearts=document.querySelector('.hearts');
+
+function createHeart(){
+
+const heart=document.createElement('div');
+
+heart.classList.add('heart');
+
+const emojis=['💖','💕','💗','💘','🎀'];
+
+heart.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.fontSize=(Math.random()*25+20)+'px';
+
+heart.style.animationDuration=(Math.random()*3+4)+'s';
+
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+<audio id="bgm" loop>
+    <source src="salsalagu.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
+</html>
